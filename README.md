@@ -4,7 +4,7 @@
 
 
 
-A simple 3D camera for Godot 4 that mimics the functionality of the editor's camera for in-game use. For a version that works for Godot 3, see the `godot-3` branch.
+A simple 3D camera for Godot 4 that mimics the functionality of the editor's camera for in-game use.
 
 ## Usage
 
