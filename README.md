@@ -2,28 +2,20 @@
 
 *A fork of adamviola's [simple-free-look-camera](https://github.com/adamviola/simple-free-look-camera)*
 
-
-
 A simple 3D camera for Godot 4 that mimics the functionality of the editor's camera for in-game use.
 
 ## Usage
 
 | Control     | Description                                |
 | ----------- | ------------------------------------------ |
-| W           | Forward                                    |
-| S           | Backward                                   |
-| A           | Left                                       |
-| D           | Right                                      |
-| Q           | Up                                         |
-| Z           | Down                                       |
+| RMB (hold)  | Free look                                  |
+| WASD        | Move                                       |
+| Q, Z        | Up, down                                   |
 | Tab         | Wireframe mode                             |
-| Esc         | Quit game                                  |
-| MMB         | Print collider to console                  |
+| MMB         | Print collider info to console             |
 | Shift+MMB   | Print raycast result dictionary to console |
 | Mouse Wheel | Increase/decrease movement speed           |
-| RMB (hold)  | Free look                                  |
-
-
+| Esc         | Quit game                                  |
 
 ## Installation
 
@@ -34,5 +26,3 @@ A simple 3D camera for Godot 4 that mimics the functionality of the editor's cam
 ## License
 
 [MIT](https://opensource.org/licenses/MIT).
-
-
