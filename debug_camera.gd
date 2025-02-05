@@ -27,10 +27,12 @@ var _a = false
 var _d = false
 var _q = false
 var _z = false
+var _x = false
 var _shift = false
 var _alt = false
 var _tab = false
 var _esc = false
+var _backspace = false
 
 # Wireframe view mode
 var wireframe = false
@@ -81,6 +83,8 @@ func _input(event):
 				_q = event.pressed
 			KEY_Z:
 				_z = event.pressed
+			KEY_X:
+				_x = event.pressed
 			KEY_SHIFT:
 				_shift = event.pressed
 			KEY_ALT:
@@ -89,6 +93,8 @@ func _input(event):
 				_tab = event.pressed
 			KEY_ESCAPE:
 				_esc = event.pressed
+			KEY_BACKSPACE:
+				_backspace = event.pressed
 
 
 # Updates mouselook and movement every frame
@@ -147,6 +153,10 @@ func _update_movement(delta):
 	else:
 		wireframe_enable = true
 	
+	# Reload scene
+	if _backspace:
+		get_tree().reload_current_scene()
+	
 	# Quit game
 	if _esc:
 		get_tree().quit()
@@ -181,8 +191,9 @@ func inspect_node():
 	
 	if _shift:
 		print("debug_camera: ", result)
+	elif _x:
+		result["collider"].queue_free()
 	else:
 		print("debug_camera: ", result["collider"])
 	
 	return result
-
